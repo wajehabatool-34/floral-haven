@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+/* ==========================================================================
+   NAVIGATION / HEADER
+   ========================================================================== */
+.main2 {
+    min-height: 87px;
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 250, 250);
+    padding: 0 5%;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.main2 a:hover {
+    color: deeppink;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.logo img {
+    height: 80px;
+    width: 85px;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    max-width: 65%;
+}
+
+.nav-cart {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ==========================================================================
+   SECTION 2: TITLES & DECORATIONS
+   ========================================================================== */
+.fst {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0 15px;
+}
+
+.line {
+    width: 155px;
+    height: 4px;
+    background-color: crimson;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* ==========================================================================
+   SECTION 3: PRODUCT GRID & CARDS
+   ========================================================================== */
+.container {
+    display: grid;
+    /* Responsive grid: fits as many 280px+ columns as possible */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.product {
+    border: 1px solid #ddd;
+    background-color: rgb(248, 203, 211);
+    padding: 15px;
+    text-align: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product:hover {
+    /* Slightly toned down to prevent screen overflow on smaller viewports */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px darkgrey;
+}
+
+.product img {
+    width: 100%;
+    max-width: 370px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block; 
+    margin-bottom: 15px; 
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.product h3 { 
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+}
+
+.product p { 
+    margin: 0;
+}
+
+.product button {
+    background-color: crimson;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+.product button:hover {
+    background-color: darkred;
+}
+
+/* ==========================================================================
+   FLOATING CHATBOX
+   ========================================================================== */
+#chaticon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: crimson;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#chaticon i {
+    font-size: 30px;
+    color: white;
+}
+
+#chatbox {
+    height: 380px;
+    width: 320px;
+    max-width: calc(100vw - 40px);
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 15px;
+    z-index: 1000;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVENESS)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .main2 {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+        height: auto;
+    }
+
+    .logo img {
+        margin-left: 0;
+        height: 60px;
+        width: 65px;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .container {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    #chatbox {
+        right: 10px;
+        left: 10px;
+        width: auto;
+        max-width: none;
+        bottom: 85px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .line {
+        width: 100px;
+    }
+}

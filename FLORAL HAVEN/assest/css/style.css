@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+/* ==========================================================================
+   NAVIGATION / HEADER
+   ========================================================================== */
+.main2 {
+    min-height: 87px;
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 250, 250);
+    padding: 0 5%;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.main2 a:hover {
+    color: deeppink;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.logo img {
+    height: 80px;
+    width: 85px;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    max-width: 65%;
+}
+
+.nav-cart {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ==========================================================================
+   SECTION 1: HERO (mY)
+   ========================================================================== */
+.mY {
+    min-height: auto;
+    width: 100%;
+    max-width: 800px;
+    padding: 5% 5%;
+    font-size: clamp(20px, 4vw, 30px);
+}
+
+.mY h3 {
+    color: palevioletred;
+}
+
+.mY p {
+    color: rgb(91, 88, 88);
+}
+
+.btn {
+    height: 35px;
+    width: 90px;
+    margin-top: 8px;
+    border-radius: 5rem;
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: crimson;
+}
+
+/* ==========================================================================
+   SECTION 2: PRODUCTS & GRID
+   ========================================================================== */
+.fst {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0 15px;
+}
+
+.line {
+    width: 155px;
+    height: 4px;
+    background-color: crimson;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.product {
+    border: 1px solid #ddd;
+    background-color: rgb(248, 203, 211);
+    padding: 15px;
+    text-align: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px darkgrey;
+}
+
+.product img {
+    width: 100%;
+    max-width: 370px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block; 
+    margin-bottom: 10px; 
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.product h3 { 
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+}
+
+.product p { 
+    margin: 0;
+}
+
+.product button {
+    background-color: crimson;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.bnt {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.btnnn {
+    height: 4rem;
+    width: 8.5rem;
+    border-radius: 5rem;
+    background-color: crimson;
+    color: whitesmoke;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s linear, background-color 0.2s linear, color 0.2s linear;
+}
+
+.btnnn:hover {
+    background: lightpink;
+    transform: scale(1.1);
+    color: #333;
+}
+
+/* ==========================================================================
+   SECTION 3: ABOUT US
+   ========================================================================== */
+.head {
+    text-align: center;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: crimson;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, 0.05);
+}
+
+span {
+    color: #333;
+}
+
+.about .vdo-cont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 5%;
+}
+
+.us {
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.us video {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border: 0.5rem solid;
+    border-radius: 0.5rem;
+    box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+.us h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(16px, 3vw, 25px);
+    background: #fff;
+    width: 80%;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.content {
+    width: 100%;
+    max-width: 600px;
+    flex: 1 1 30rem;
+    padding: 20px;
+}
+
+.content h3 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #333;
+}
+
+.content p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #999;
+    padding: 0.5rem 0;
+    padding-top: 1rem;
+}
+
+.heading {
+    color: crimson;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.para {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.main03 li,
+.main4 li {
+    text-align: center;
+    font-size: 1.4rem;
+    list-style-position: inside;
+}
+
+.main4 h3 {
+    color: rgb(244, 42, 143);
+    text-align: center;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: pink;
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 5px;
+    color: #333;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVENESS)
+   ========================================================================== */
+@media screen and (max-width: 992px) {
+    .about .vdo-cont {
+        flex-direction: column;
+    }
+
+    .us, 
+    .content {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main2 {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+        height: auto;
+    }
+
+    .logo img {
+        margin-left: 0;
+        height: 60px;
+        width: 65px;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .mY {
+        padding: 10% 5%;
+        text-align: center;
+    }
+
+    .container {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .us h3 {
+        width: 90%;
+        padding: 0.8rem 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product button {
+        width: 100%;
+    }
+
+    .line {
+        width: 100px;
+    }
+
+    .para,
+    .main03 li,
+    .main4 li {
+        font-size: 1.1rem;
+    }
+}
