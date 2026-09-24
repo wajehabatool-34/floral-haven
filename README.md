@@ -44,8 +44,6 @@ The website layout is designed to work on different screen sizes.
 | ⭐ **Reviews** | Customer reviews and review form |
 | 📩 **Contact** | Contact form for users |
 
----
-
 >>🌹 Flower Collection
 
 The website includes different types of flowers and arrangements, including:
@@ -74,7 +72,7 @@ The website includes different types of flowers and arrangements, including:
 
 </p>
 
->>>>>>Built With<<<<<<
+>>>Built With
 
 - **HTML5** — Website structure
 - **CSS3** — Styling and responsive layouts
