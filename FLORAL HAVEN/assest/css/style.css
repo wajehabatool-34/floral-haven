@@ -62,6 +62,7 @@
     width: 100%;
     max-width: 800px;
     padding: 5% 5%;
+    margin-top: 1.5%;
     font-size: clamp(20px, 4vw, 30px);
 }
 
@@ -94,7 +95,7 @@
    ========================================================================== */
 .fst {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 16rem;
     padding: 0 15px;
 }
 
